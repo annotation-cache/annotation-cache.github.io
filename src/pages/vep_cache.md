@@ -1,5 +1,6 @@
 ---
 title: VEP Cache
+layout: ../layouts/Page.astro
 ---
 
 Since the VEP cache is stored on the cloud, we added an extra layer of organization to the cache.
