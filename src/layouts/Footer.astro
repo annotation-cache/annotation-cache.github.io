@@ -1,0 +1,96 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="Footer">
+    <p class="footer">
+        This resource was developed by <a href="https://maxulysse.github.io/"
+            >Maxime U. Garcia</a
+        >, bioinformatician at <a href="https://seqera.io/">Seqera Labs</a> in Barcelona
+        | Stockholm. It is based on <a href="https://pcingola.github.io/SnpEff/"
+            >SnpEff</a
+        > and
+        <a href="https://www.ensembl.org/info/docs/tools/vep/index.html">VEP</a>
+        ressources. It was created for the <a href="https://nf-co.re/"
+            >nf-core</a
+        > community, and has been uploaded to S3 with the help of <a
+            href="https://www.nextflow.io/">Nextflow</a
+        > and <a href="https://tower.nf/">Tower</a>. All of that was made
+        possible by <a href="https://registry.opendata.aws/">Open Data on AWS</a
+        >.
+        <br />
+        <a href="https://registry.opendata.aws/"
+            ><img
+                title="Open Data on AWS"
+                src="/AWS_logo.png"
+                height="100"
+            /></a
+        >
+        <a href="https://nf-co.re/"
+            ><img title="nf-core" src="/nf-core_logo.png" height="100" /></a
+        >
+    </p>
+</Layout>
+
+<style>
+    main {
+        margin: auto;
+        padding: 1rem;
+        width: 800px;
+        max-width: calc(100% - 2rem);
+        color: white;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+    .astro-a {
+        position: absolute;
+        top: -32px;
+        left: 50%;
+        transform: translatex(-50%);
+        width: 220px;
+        height: auto;
+        z-index: -1;
+    }
+    h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+    .text-gradient {
+        background-image: var(--accent-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 400%;
+        background-position: 0%;
+    }
+    .footer {
+        margin-bottom: 2rem;
+        border: 1px solid rgba(var(--accent-light), 25%);
+        background: linear-gradient(
+            rgba(var(--accent-dark), 66%),
+            rgba(var(--accent-dark), 33%)
+        );
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+    .footer code {
+        font-size: 0.8em;
+        font-weight: bold;
+        background: rgba(var(--accent-light), 12%);
+        color: rgb(var(--accent-light));
+        border-radius: 4px;
+        padding: 0.3em 0.4em;
+    }
+    .footer strong {
+        color: rgb(var(--accent-light));
+    }
+    .link-card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+        gap: 2rem;
+        padding: 0;
+    }
+</style>
