@@ -3,9 +3,9 @@ title: VEP Cache
 layout: ../layouts/Page.astro
 ---
 
-Since the VEP cache is stored on the cloud, we added an extra layer of organization to the cache.
-The cache is organized by VEP cache version / genome build, and stored in the following format:
-Running this command with `--no-sign-request` will allow you to see the contents of the bucket:
+Since the VEP cache is stored on the cloud, an extra layer of organization was added.
+The cache is organized by VEP cache version / genome build cache version.
+Running this command with `--no-sign-request`, will allow you to see the contents of the bucket:
 
 ```bash
 aws s3 ls s3://annotation-cache/vep_cache/
