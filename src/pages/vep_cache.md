@@ -9,6 +9,7 @@ Running this command with `--no-sign-request`, will allow you to see the content
 
 ```bash
 aws s3 ls s3://annotation-cache/vep_cache/
+    PRE 102_GRCh38/
     PRE 102_GRCm38/
     PRE 108_GRCh38/
     PRE 108_WBcel235/
