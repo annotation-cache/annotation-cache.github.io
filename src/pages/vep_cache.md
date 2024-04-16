@@ -18,4 +18,7 @@ aws s3 ls s3://annotation-cache/vep_cache/
     PRE 110_GRCh37/
     PRE 110_GRCh38/
     PRE 110_WBcel235/
+    PRE 111_GRCh37/
+    PRE 111_GRCh38/
+    PRE 111_WBcel235/
 ```
