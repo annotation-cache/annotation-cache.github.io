@@ -37,6 +37,6 @@ aws s3 --no-sign-request --region eu-west-1 sync s3://annotation-cache/vep_cache
 
 Or alternatively this command if you are in a cloud setup with multiple genome versions:
 
-```
+```bash
 aws s3 --no-sign-request --region eu-west-1 sync s3://annotation-cache/vep_cache/114_GRCh38/ ./vep_cache/114_GRCh38/
 ```
