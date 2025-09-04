@@ -27,16 +27,19 @@ aws s3 ls s3://annotation-cache/vep_cache/
     PRE 114_GRCh37/
     PRE 114_GRCh38/
     PRE 114_WBcel235/
+    PRE 115_GRCh37/
+    PRE 115_GRCh38/
+    PRE 115_WBcel235/
 ```
 
 You can then use such a command to sync any genome of interest locally
 
 ```bash
-aws s3 --no-sign-request --region eu-west-1 sync s3://annotation-cache/vep_cache/114_GRCh38/ ./vep_cache/
+aws s3 --no-sign-request --region eu-west-1 sync s3://annotation-cache/vep_cache/115_GRCh38/ ./vep_cache/
 ```
 
 Or alternatively this command if you are in a cloud setup with multiple genome versions:
 
 ```bash
-aws s3 --no-sign-request --region eu-west-1 sync s3://annotation-cache/vep_cache/114_GRCh38/ ./vep_cache/114_GRCh38/
+aws s3 --no-sign-request --region eu-west-1 sync s3://annotation-cache/vep_cache/115_GRCh38/ ./vep_cache/115_GRCh38/
 ```
