@@ -11,6 +11,8 @@ Running this command with `--no-sign-request`, will allow you to see the content
 aws s3 ls s3://annotation-cache/snpeff_cache/
     PRE GRCh37.87/
     PRE GRCh38.105/
+    PRE GRCh38.99/
     PRE GRCm38.99/
     PRE WBcel235.105/
+    PRE WBcel235.99/
 ```
