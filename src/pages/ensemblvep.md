@@ -1,11 +1,10 @@
 ---
-title: VEP Cache
+title: Ensembl VEP Cache
 layout: ../layouts/Page.astro
 ---
 
-Since the VEP cache is stored on the cloud, an extra layer of organization was added.
-The cache is organized by VEP cache version / genome build cache version.
-Running this command with `--no-sign-request`, will allow you to see the contents of the bucket:
+The cache is organized by Ensembl VEP cache version / genome build.
+Running this command with `--no-sign-request` will allow you to see the contents of the bucket:
 
 ```bash
 aws s3 ls s3://annotation-cache/vep_cache/

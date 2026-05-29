@@ -4,23 +4,43 @@ import Footer from "../layouts/Footer.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title="Annotation Cache">
-    <main>
+<Layout title={`${frontmatter.title} - Annotation Cache`}>
+    <div class="page-card">
         <h2>{frontmatter.title}</h2>
         <slot />
-        <!-- Markdown content is injected here -->
-        <!-- ... -->
-        <Footer />
-    </main>
+    </div>
+    <Footer />
 </Layout>
 
 <style>
-    main {
-        margin: auto;
-        padding: 1rem;
-        width: 800px;
-        max-width: calc(100% - 2rem);
-        font-size: 20px;
+    .page-card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        padding: 1.5rem 2rem;
+        position: relative;
+        overflow: hidden;
+    }
+    .page-card::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: linear-gradient(180deg, rgb(var(--accent)), rgb(var(--accent-dark)));
+    }
+    .page-card h2 {
+        margin: 0 0 1rem;
+        color: rgb(var(--accent-dark));
+    }
+    .page-card p {
+        margin: 0;
         line-height: 1.6;
     }
+    .page-card p + p {
+        margin-top: 0.75rem;
+    }
 </style>
+
+
