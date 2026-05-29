@@ -19,7 +19,6 @@ Thanks to all contributors for their extensive assistance in the development and
 - [Edmund Miller](https://github.com/edmundmiller)
 - [Friederike Hanssen](https://github.com/FriederikeHanssen)
 - [Matthias De Smet](https://github.com/matthdsm)
-- [Maxime U. Garcia](https://github.com/maxulysse)
 - [Nour Mahfel](https://github.com/nourmahfel)
 - [Raquel Manzano](https://github.com/RaqManzano)
 
