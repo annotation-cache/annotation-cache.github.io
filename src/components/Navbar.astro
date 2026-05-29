@@ -1,26 +1,33 @@
 <nav>
-    <a href="/" class="logo">
-        <img src="/annotation-cache.png" alt="Annotation Cache" height="40" />
-        <span>Annotation Cache</span>
-    </a>
-    <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/snpeff_cache/">SnpEff</a></li>
-        <li><a href="/vep_cache/">VEP</a></li>
-        <li><a href="/about/">About</a></li>
-    </ul>
+    <div class="nav-inner">
+        <a href="/" class="logo">
+            <img src="/annotation-cache.png" alt="Annotation Cache" height="40" />
+            <span>Annotation Cache</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/snpeff_cache/">SnpEff</a></li>
+            <li><a href="/vep_cache/">VEP</a></li>
+            <li><a href="/about/">About</a></li>
+        </ul>
+    </div>
 </nav>
 
 <style>
     nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0.75rem 2rem;
         background: linear-gradient(135deg, rgb(var(--accent-dark)), rgb(var(--accent)));
         position: sticky;
         top: 0;
         z-index: 100;
+    }
+    .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem 1rem;
+        margin: 0 auto;
+        width: 800px;
+        max-width: calc(100% - 2rem);
     }
     .logo {
         display: flex;
