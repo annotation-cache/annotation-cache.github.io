@@ -1,0 +1,103 @@
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="logo">
+            <img src="/annotation-cache.svg" alt="Annotation Cache" height="40" />
+            <span>Annotation Cache</span>
+        </a>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon" aria-label="Toggle menu">&#9776;</label>
+        <ul class="nav-links">
+            <li><a href="/ensemblvep/">Ensembl VEP</a></li>
+            <li><a href="/snpeff/">SnpEff</a></li>
+            <li><a href="/svanna/">SvAnna</a></li>
+            <li><a href="/about/">About</a></li>
+        </ul>
+    </div>
+</nav>
+
+<style>
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        margin-bottom: 1rem;
+    }
+    .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        background: linear-gradient(135deg, rgb(var(--accent-dark)), rgb(var(--accent)));
+        border-radius: 8px;
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: white;
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+    .logo img {
+        border-radius: 4px;
+    }
+    .nav-links {
+        display: flex;
+        gap: 1.5rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .nav-links a {
+        color: rgba(255, 255, 255, 0.85);
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: color 0.2s;
+    }
+    .nav-links a:hover {
+        color: white;
+    }
+    .menu-toggle {
+        display: none;
+    }
+    .menu-icon {
+        display: none;
+        font-size: 1.5rem;
+        color: white;
+        cursor: pointer;
+        user-select: none;
+    }
+    @media (max-width: 640px) {
+        .menu-icon {
+            display: block;
+        }
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, rgb(var(--accent-dark)), rgb(var(--accent)));
+            border-radius: 8px;
+            padding: 0.5rem 0;
+            gap: 0;
+            margin-top: 0.5rem;
+        }
+        .nav-links li {
+            text-align: center;
+        }
+        .nav-links a {
+            display: block;
+            padding: 0.75rem 1rem;
+        }
+        .menu-toggle:checked ~ .nav-links {
+            display: flex;
+        }
+        .nav-inner {
+            position: relative;
+        }
+    }
+</style>

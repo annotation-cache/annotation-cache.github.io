@@ -11,7 +11,8 @@
         "check": "astro check",
         "format": "prettier --check .",
         "format:fix": "prettier --write .",
-        "lint:md": "markdownlint 'src/**/*.md'",
+        "lint:md": "markdownlint-cli2 '**/*.md' '!node_modules' '!dist'",
+        "lint": "npm run check && npm run lint:md",
         "astro": "astro"
     },
     "dependencies": {
@@ -19,7 +20,7 @@
     },
     "devDependencies": {
         "@astrojs/check": "^0.9.9",
-        "markdownlint-cli": "^0.48.0",
+        "markdownlint-cli2": "^0.17.0",
         "prettier": "^3.6.2",
         "typescript": "^6.0.3"
     }

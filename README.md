@@ -1,5 +1,3 @@
 # Annotation Cache
 
-Annotation Cache is a resource based on [SnpEff](https://pcingola.github.io/SnpEff/), and [VEP](https://www.ensembl.org/info/docs/tools/vep/index.html).
-It was created for the [nf-core](https://nf-co.re/) community, and has been uploaded to S3 with the help of [Nextflow](https://www.nextflow.io/) and [Seqera Platform](https://cloud.seqera.io/).
-All of that was made possible by [Open Data on AWS](https://registry.opendata.aws/).
+Annotation Cache is an [Open Data on AWS](https://registry.opendata.aws/) resource providing pre-built [Ensembl VEP](https://www.ensembl.org/info/docs/tools/vep/index.html) and [SnpEff](https://pcingola.github.io/SnpEff/) annotation caches, as well as [SvAnna](https://github.com/monarch-initiative/SvAnna) databases, for the [nf-core](https://nf-co.re/) community. Created with [Nextflow](https://www.nextflow.io/) and [Seqera Platform](https://cloud.seqera.io/), it eliminates the need for cloud users to download large annotation databases individually by using a distributed cloud file system like [Fusion](https://seqera.io/fusion/).
