@@ -1,0 +1,86 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../layouts/Footer.astro";
+---
+
+<Layout title="About - Annotation Cache">
+    <main>
+        <h1><span class="text-gradient">About</span></h1>
+
+        <h2>Project</h2>
+        <p>
+            Annotation Cache is a public <a href="https://registry.opendata.aws/">AWS Open Data</a>
+            resource providing pre-built <a href="https://pcingola.github.io/SnpEff/">SnpEff</a> and
+            <a href="https://www.ensembl.org/info/docs/tools/vep/index.html">VEP</a> annotation
+            caches for the <a href="https://nf-co.re/">nf-core</a> community. Created with
+            <a href="https://www.nextflow.io/">Nextflow</a> and
+            <a href="https://cloud.seqera.io/">Seqera Platform</a>, it eliminates the need for
+            each user to download large annotation databases individually.
+        </p>
+
+        <h2>Contributors</h2>
+        <ul class="contributors">
+            <li>
+                <a href="https://github.com/maxulysse">Maxime U. Garcia</a>
+                &mdash; creator and maintainer
+            </li>
+            <li>
+                <a href="https://github.com/ewels">Phil Ewels</a>
+                &mdash; nf-core community support
+            </li>
+            <li>
+                <a href="https://github.com/mribeirodantas">Marcel Ribeiro-Dantas</a>
+                &mdash; Seqera Platform support
+            </li>
+        </ul>
+
+        <h2>Nextflow Summit 2023 &mdash; Barcelona</h2>
+        <p>
+            Maxime Garcia presented <em>"Annotation cache: using nf-core/modules and Seqera Platform to
+            build an AWS open data resource"</em> at the
+            <a href="https://summit.nextflow.io/2023/barcelona/">Nextflow Summit 2023</a> in Barcelona.
+        </p>
+        <p>
+            The talk described the journey of building this public resource using nf-core/modules,
+            orchestrating workflows with Nextflow, deploying via Seqera Platform, and publishing
+            the data on AWS Open Data.
+        </p>
+        <ul>
+            <li>
+                <strong>Event:</strong> Nextflow Summit 2023, Barcelona
+            </li>
+            <li>
+                <strong>Date:</strong> October 19, 2023
+            </li>
+            <li>
+                <strong>Location:</strong> Torre Glòries, Barcelona
+            </li>
+            <li>
+                <strong>Watch:</strong>
+                <a href="https://www.youtube.com/playlist?list=PLPZ8WHdZGxmUotnP-tWRVNtuNWpN7xbpL">
+                    Nextflow Summit 2023 playlist
+                </a>
+            </li>
+        </ul>
+
+        <Footer />
+    </main>
+</Layout>
+
+<style>
+    h2 {
+        margin-top: 2rem;
+        color: rgb(var(--accent-dark));
+    }
+    .contributors {
+        list-style: none;
+        padding: 0;
+    }
+    .contributors li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(var(--accent-light), 40%);
+    }
+    .contributors li:last-child {
+        border-bottom: none;
+    }
+</style>
