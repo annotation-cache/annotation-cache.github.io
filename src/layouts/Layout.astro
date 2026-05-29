@@ -75,7 +75,7 @@ const { title } = Astro.props;
         background-position: 0%;
     }
     .footer {
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         border: 1px solid rgba(var(--accent-light), 25%);
         background: linear-gradient(
             rgba(var(--accent-dark), 66%),
@@ -83,10 +83,18 @@ const { title } = Astro.props;
         );
         padding: 1.5rem;
         border-radius: 8px;
+        color: white;
+        font-size: 0.95rem;
+    }
+    .footer a {
+        color: rgb(var(--accent-light));
+    }
+    .footer-logos {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 2rem;
+        margin-bottom: 2rem;
     }
     .link-card-grid {
         display: grid;
