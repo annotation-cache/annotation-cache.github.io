@@ -25,7 +25,7 @@ Thanks to all contributors for their extensive assistance in the development and
 
 ## Nextflow Summit 2023
 
-Maxime U. Garcia presented *"Annotation cache: using nf-core/modules and Seqera Platform to build an AWS open data resource"* at the [Nextflow Summit 2023](https://summit.nextflow.io/2023/barcelona/) in Barcelona.
+Maxime U. Garcia presented _"Annotation cache: using nf-core/modules and Seqera Platform to build an AWS open data resource"_ at the [Nextflow Summit 2023](https://summit.nextflow.io/2023/barcelona/) in Barcelona.
 
 The talk described the journey of building this public resource using nf-core/modules, orchestrating workflows with Nextflow, deploying via Seqera Platform, and publishing the data on AWS Open Data.
 
