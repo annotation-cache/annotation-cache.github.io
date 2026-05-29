@@ -5,23 +5,17 @@
     "private": true,
     "scripts": {
         "dev": "astro dev",
-        "start": "astro dev",
         "build": "astro build",
         "preview": "astro preview",
         "check": "astro check",
-        "format": "prettier --check .",
-        "format:fix": "prettier --write .",
-        "lint:md": "markdownlint-cli2 '**/*.md' '!node_modules' '!dist'",
-        "lint": "npm run check && npm run lint:md",
-        "astro": "astro"
+        "lint": "npm run check",
+        "prek": "prek run"
     },
     "dependencies": {
         "astro": "^6.4.2"
     },
     "devDependencies": {
         "@astrojs/check": "^0.9.9",
-        "markdownlint-cli2": "^0.17.0",
-        "prettier": "^3.6.2",
         "typescript": "^6.0.3"
     }
 }
