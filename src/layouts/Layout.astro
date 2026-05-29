@@ -83,22 +83,15 @@ const { title } = Astro.props;
         );
         padding: 1.5rem;
         border-radius: 8px;
-    }
-    .footer code {
-        font-size: 0.8em;
-        font-weight: bold;
-        background: rgba(var(--accent-light), 12%);
-        color: rgb(var(--accent-light));
-        border-radius: 4px;
-        padding: 0.3em 0.4em;
-    }
-    .footer strong {
-        color: rgb(var(--accent-light));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
     }
     .link-card-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(28ch, 1fr));
+        gap: 2.5rem;
         padding: 0;
     }
 </style>
