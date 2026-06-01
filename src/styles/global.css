@@ -276,6 +276,6 @@ nav {
 
 @media (max-width: 640px) {
     .footer-logos {
-        margin-left: 0rem;
+        margin-left: 0;
     }
 }
