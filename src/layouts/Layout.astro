@@ -1,5 +1,6 @@
 ---
 import Navbar from "../components/Navbar.astro";
+import "../styles/global.css";
 
 interface Props {
     title: string;
@@ -8,104 +9,27 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="description" content="Annotation Cache - public  Open Data on AWS resource providing pre-built Ensembl VEP, SnpEff and SvAnna annotation caches for the nf-core community." />
+        <meta
+            name="description"
+            content="Annotation Cache - public Open Data on AWS resource providing pre-built Ensembl VEP, SnpEff and SvAnna annotation caches for the nf-core community."
+        />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
-    </head><body>
+    </head>
+    <body>
         <main>
             <Navbar />
             <slot />
         </main>
     </body>
 </html>
-<style is:global>
-    :root {
-        --accent: 13, 192, 159;
-        --accent-light: 182, 236, 226;
-        --accent-dark: 5, 76, 63;
-        --accent-gradient: linear-gradient(
-            45deg,
-            rgb(var(--accent)),
-            rgb(var(--accent-dark)) 30%,
-            white 60%
-        );
-    }
-    html {
-        font-family: system-ui, sans-serif;
-        background: #ffffff;
-        background-size: 224px;
-    }
-    code {
-        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-    }
-    main {
-        margin: auto;
-        padding: 1rem;
-        width: min(960px, calc(100% - 2rem));
-        box-sizing: border-box;
-        font-size: 20px;
-        line-height: 1.6;
-    }
-    .astro-a {
-        position: absolute;
-        top: -32px;
-        left: 50%;
-        transform: translatex(-50%);
-        width: 220px;
-        height: auto;
-        z-index: -1;
-    }
-    h1 {
-        font-size: 4rem;
-        font-weight: 700;
-        line-height: 1;
-        text-align: center;
-        margin-bottom: 1em;
-    }
-    .text-gradient {
-        background-image: var(--accent-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 400%;
-        background-position: 0%;
-    }
-    .footer {
-        margin-bottom: 2rem;
-        border: 1px solid rgba(var(--accent-light), 25%);
-        background: linear-gradient(135deg, rgb(var(--accent-dark)), rgb(var(--accent)));
-        padding: 1.5rem;
-        border-radius: 8px;
-        color: white;
-        font-size: 0.95rem;
-    }
-    .footer a {
-        color: rgb(var(--accent-light));
-    }
-    .footer-logos {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-        margin-top: 1rem;
-    }
-    .logo-aws {
-        margin-top: 25px;
-    }
-    .logo-nextflow {
-        margin-top: 4px;
-    }
-    .link-card-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 2.5rem;
-        padding: 0;
-    }
-</style>
