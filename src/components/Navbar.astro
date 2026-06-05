@@ -9,12 +9,35 @@ const pathname = Astro.url.pathname;
             <span>Annotation Cache</span>
         </a>
         <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-        <label for="menu-toggle" class="menu-icon" aria-label="Toggle menu">&#9776;</label>
         <ul class="nav-links">
             <li><a href="/ensemblvep/" aria-current={pathname.startsWith("/ensemblvep") ? "page" : undefined}>Ensembl VEP</a></li>
             <li><a href="/snpeff/" aria-current={pathname.startsWith("/snpeff") ? "page" : undefined}>SnpEff</a></li>
             <li><a href="/svanna/" aria-current={pathname.startsWith("/svanna") ? "page" : undefined}>SvAnna</a></li>
             <li><a href="/about/" aria-current={pathname.startsWith("/about") ? "page" : undefined}>About</a></li>
         </ul>
+        <div class="nav-end">
+            <label for="menu-toggle" class="menu-icon" aria-label="Toggle menu">&#9776;</label>
+            <div class="theme-dropdown">
+                <button
+                    id="theme-toggle"
+                    type="button"
+                    title="Select theme"
+                    aria-label="Select theme"
+                >
+                    <i class="fa-solid fa-moon" aria-hidden="true"></i>
+                </button>
+                <div class="theme-dropdown-menu">
+                    <button class="theme-option" data-theme="light">
+                        <i class="fa-solid fa-sun"></i> Light
+                    </button>
+                    <button class="theme-option" data-theme="dark">
+                        <i class="fa-solid fa-moon"></i> Dark
+                    </button>
+                    <button class="theme-option" data-theme="auto">
+                        <i class="fa-solid fa-adjust"></i> System
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 </nav>

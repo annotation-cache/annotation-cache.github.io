@@ -3,7 +3,9 @@ title: SvAnna DB
 layout: ../layouts/Page.astro
 ---
 
-SvAnna (Structural Variant Annotation and Analysis) assesses all classes of structural variants and their intersection with transcripts and regulatory sequences, relating predicted effects on gene function with clinical phenotype data.
+[SvAnna](https://github.com/monarch-initiative/SvAnna) (Structural Variant Annotation and Analysis) assesses all classes of structural variants and their intersection with transcripts and regulatory sequences, relating predicted effects on gene function with clinical phenotype data.
+
+The cache is organized by SvAnna DB version.
 
 Use this command with `--no-sign-request` to see the available versions:
 
