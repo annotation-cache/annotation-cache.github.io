@@ -3,6 +3,8 @@ title: Ensembl VEP Cache
 layout: ../layouts/Page.astro
 ---
 
+[Ensembl VEP](https://www.ensembl.org/info/docs/tools/vep/index.html) (Variant Effect Predictor) determines the functional effects of genomic variants on gene transcripts, proteins, and regulatory regions. It supports a wide range of variant types and genome assemblies, providing comprehensive annotations including consequence predictions, population frequencies, and pathogenicity scores.
+
 The cache is organized by Ensembl VEP cache version / genome build.
 Running this command with `--no-sign-request` will allow you to see the contents of the bucket:
 
