@@ -22,6 +22,8 @@
     --sync-bg: #f0f8f4;
     --sync-border: #c8e6c9;
     --sync-color: #2e7d32;
+    --link-color: #005ac2;
+    --link-color-hover: #00408f;
 }
 
 html[data-theme="dark"] {
@@ -45,6 +47,8 @@ html[data-theme="dark"] {
     --sync-bg: #1a3a1a;
     --sync-border: #2e7d32;
     --sync-color: #81c784;
+    --link-color: #8fc2ff;
+    --link-color-hover: #b6d7ff;
 }
 
 html {
@@ -63,6 +67,12 @@ code {
         Bitstream Vera Sans Mono,
         Courier New,
         monospace;
+}
+a {
+    color: var(--link-color);
+}
+a:hover {
+    color: var(--link-color-hover);
 }
 main {
     margin: auto;
