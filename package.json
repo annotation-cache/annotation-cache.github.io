@@ -12,7 +12,7 @@
         "prek": "prek run"
     },
     "dependencies": {
-        "astro": "^7.0.3"
+        "astro": "^7.0.6"
     },
     "devDependencies": {
         "@astrojs/check": "^0.9.9",
