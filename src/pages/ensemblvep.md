@@ -32,6 +32,7 @@ aws s3 ls s3://annotation-cache/vep_cache/
     PRE 115_GRCh38/
     PRE 115_WBcel235/
     PRE 116_GRCh38/
+    PRE 116_GRCm39/
 ```
 
 You can then use such a command to sync any genome of interest locally
