@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Footer from "../layouts/Footer.astro";
 const { frontmatter } = Astro.props;
 ---
 
@@ -9,5 +8,4 @@ const { frontmatter } = Astro.props;
         <h2>{frontmatter.title}</h2>
         <slot />
     </div>
-    <Footer />
 </Layout>

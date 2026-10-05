@@ -1,26 +1,24 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Footer from "../layouts/Footer.astro";
 import Card from "../components/Card.astro";
 ---
 
 <Layout title="Annotation Cache">
     <ul role="list" class="link-card-grid">
         <Card
-            href="ensemblvep/"
+            href="/ensemblvep/"
             title="Ensembl VEP"
             description="The Ensembl Variant Effect Predictor predicts the functional effects of genomic variants on gene transcripts and protein sequence."
         />
         <Card
-            href="snpeff/"
+            href="/snpeff/"
             title="SnpEff"
             description="A variant annotation and effect prediction tool that annotates and predicts the effects of genetic variants on genes and proteins."
         />
         <Card
-            href="svanna/"
+            href="/svanna/"
             title="SvAnna"
             description="Structural Variant Annotation and Analysis that assesses structural variants and their impact on transcripts and regulatory sequences."
         />
     </ul>
-    <Footer />
 </Layout>
