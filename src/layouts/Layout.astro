@@ -5,20 +5,34 @@ import "../styles/global.css";
 
 interface Props {
     title: string;
+    description?: string;
 }
 
-const { title } = Astro.props;
+const {
+    title,
+    description = "Annotation Cache - public Open Data on AWS resource providing pre-built Ensembl VEP, SnpEff and SvAnna annotation caches for the nf-core community.",
+} = Astro.props;
+
+const siteTitle = "Annotation Cache";
+const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
 ---
 
 <!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta
-            name="description"
-            content="Annotation Cache - public Open Data on AWS resource providing pre-built Ensembl VEP, SnpEff and SvAnna annotation caches for the nf-core community."
-        />
+        <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width" />
+        <meta name="theme-color" content="#ffffff" />
+        <link rel="canonical" href={pageUrl} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:site_name" content={siteTitle} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={pageUrl} />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
         <link
