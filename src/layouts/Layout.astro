@@ -19,111 +19,26 @@ const { title } = Astro.props;
         />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
         <link
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha384-rWj9FmWWt3OMqd9vBkWRhFavvVUYalYqGPoMdL1brs/qvvqz88gvLShYa4hKNyqb"
+            crossorigin="anonymous"
         />
         <meta name="generator" content={Astro.generator} />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data:; font-src https://cdnjs.cloudflare.com; connect-src 'self'; frame-src 'none'; object-src 'none'"
+        />
         <title>{title}</title>
-        <script is:inline>
-            (function () {
-                var saved = localStorage.getItem("theme");
-                var theme = "light";
-                if (saved === "dark" || saved === "light") {
-                    theme = saved;
-                } else if (
-                    !saved &&
-                    window.matchMedia("(prefers-color-scheme: dark)").matches
-                ) {
-                    theme = "dark";
-                }
-                document.documentElement.setAttribute("data-theme", theme);
-            })();
-        </script>
+        <script is:inline src="/js/theme-init.js"></script>
     </head>
     <body>
         <main>
             <Navbar />
             <slot />
         </main>
+        <script is:inline src="/js/theme.js"></script>
     </body>
 </html>
-
-<script>
-    function resolveTheme(saved: string | null): string {
-        if (saved === "dark") return "dark";
-        if (saved === "light") return "light";
-        return window.matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
-            : "light";
-    }
-
-    function setTheme(saved: string | null): void {
-        const theme = resolveTheme(saved);
-        document.documentElement.setAttribute("data-theme", theme);
-        updateToggleIcon(theme);
-        setActiveOption(saved);
-    }
-
-    function updateToggleIcon(theme: string): void {
-        const icon = document.querySelector("#theme-toggle i");
-        if (!icon) return;
-        icon.className = "fa-solid";
-        icon.classList.add(
-            theme === "dark" ? "fa-moon" : "fa-sun",
-        );
-    }
-
-    function setActiveOption(saved: string | null): void {
-        document.querySelectorAll(".theme-option").forEach((opt) => {
-            const el = opt as HTMLElement;
-            el.classList.toggle(
-                "active",
-                el.dataset.theme === saved,
-            );
-        });
-    }
-
-    function switchTheme(e: Event): void {
-        const opt = e.currentTarget as HTMLElement | null;
-        if (!opt?.dataset?.theme) return;
-        const saved = opt.dataset.theme;
-        localStorage.setItem("theme", saved);
-        setTheme(saved);
-        closeDropdown();
-    }
-
-    function toggleDropdown(e: Event): void {
-        e.stopPropagation();
-        const dropdown = document.querySelector(".theme-dropdown");
-        dropdown?.classList.toggle("open");
-    }
-
-    function closeDropdown(): void {
-        document.querySelector(".theme-dropdown")?.classList.remove("open");
-    }
-
-    const saved = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
-    setTheme(saved || (prefersDark.matches ? "dark" : "light"));
-    if (!saved) localStorage.setItem("theme", "auto");
-    setActiveOption(saved || "auto");
-
-    document
-        .getElementById("theme-toggle")
-        ?.addEventListener("click", toggleDropdown);
-
-    document.querySelectorAll(".theme-option").forEach((opt) => {
-        opt.addEventListener("click", switchTheme);
-    });
-
-    document.addEventListener("click", (e: Event) => {
-        const target = e.target as HTMLElement | null;
-        if (target && !target.closest(".theme-dropdown")) closeDropdown();
-    });
-
-    prefersDark.addEventListener("change", () => {
-        const current = localStorage.getItem("theme");
-        if (!current || current === "auto") setTheme("auto");
-    });
-</script>
