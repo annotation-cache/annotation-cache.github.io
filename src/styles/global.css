@@ -57,6 +57,23 @@ html {
     color: var(--text);
     transition: background 0.3s, color 0.3s;
 }
+
+.skip-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    z-index: 10000;
+    padding: 0.5rem 1rem;
+    background: var(--accent-dark);
+    color: white;
+    text-decoration: none;
+    border-radius: 0 0 6px 0;
+}
+.skip-link:focus {
+    transform: translateY(0);
+}
+
 code {
     font-family:
         Menlo,

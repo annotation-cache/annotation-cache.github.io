@@ -50,7 +50,8 @@ const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
         <script is:inline src="/js/theme-init.js"></script>
     </head>
     <body>
-        <main>
+        <a class="skip-link" href="#main-content">Skip to main content</a>
+        <main id="main-content">
             <Navbar />
             <slot />
             <Footer />
