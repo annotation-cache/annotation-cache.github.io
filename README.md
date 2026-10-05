@@ -38,3 +38,7 @@ src/layouts/        Shared layouts (Layout, Page, Footer)
 ## Deployment
 
 Deployment is handled by GitHub Actions to GitHub Pages on every push to `main` that changes site sources.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for local setup, quality checks, and pull request guidelines.
