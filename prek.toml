@@ -27,6 +27,13 @@ id = "mixed-line-ending"
 repo = "local"
 
 [[repos.hooks]]
+id = "eslint"
+name = "eslint"
+entry = "npm run lint:eslint"
+language = "system"
+pass_filenames = false
+
+[[repos.hooks]]
 id = "astro-check"
 name = "astro-check"
 entry = "npm run check"
