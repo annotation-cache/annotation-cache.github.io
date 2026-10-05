@@ -11,8 +11,9 @@
         "build": "astro build",
         "preview": "astro preview",
         "check": "astro check",
-        "lint": "npm run check",
-        "prek": "prek run"
+        "lint": "npm run prek",
+        "prek": "prek run",
+        "smoke": "bash scripts/smoke.sh"
     },
     "dependencies": {
         "astro": "^7.3.5"
