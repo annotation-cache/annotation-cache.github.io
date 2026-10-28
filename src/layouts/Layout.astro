@@ -51,11 +51,13 @@ const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
     </head>
     <body>
         <a class="skip-link" href="#main-content">Skip to main content</a>
-        <main id="main-content">
+        <div class="container">
             <Navbar />
-            <slot />
+            <main id="main-content">
+                <slot />
+            </main>
             <Footer />
-        </main>
+        </div>
         <script is:inline src="/js/theme.js"></script>
     </body>
 </html>

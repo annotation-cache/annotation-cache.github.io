@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/annotation-cache/annotation-cache.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/annotation-cache/annotation-cache.github.io/actions/workflows/ci.yml)
 [![Deploy](https://github.com/annotation-cache/annotation-cache.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/annotation-cache/annotation-cache.github.io/actions/workflows/deploy.yml)
-[![License](https://img.shields.io/github/license/annotation-cache/annotation-cache.github.io)](https://github.com/annotation-cache/annotation-cache.github.io/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/annotation-cache/annotation-cache.github.io)](https://github.com/annotation-cache/annotation-cache.github.io/blob/main/LICENSE.md)
 
 Website for [Annotation Cache](https://annotation-cache.github.io) — a public [Open Data on AWS](https://registry.opendata.aws/) resource providing pre-built [Ensembl VEP](https://www.ensembl.org/info/docs/tools/vep/index.html) and [SnpEff](https://pcingola.github.io/SnpEff/) annotation caches, as well as [SvAnna](https://github.com/monarch-initiative/SvAnna) databases, for the [nf-core](https://nf-co.re/) community.
 

@@ -5,7 +5,7 @@ const { frontmatter } = Astro.props;
 
 <Layout title={`${frontmatter.title} - Annotation Cache`}>
     <div class="page-card">
-        <h2>{frontmatter.title}</h2>
+        <h1>{frontmatter.title}</h1>
         <slot />
     </div>
 </Layout>

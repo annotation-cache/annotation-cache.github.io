@@ -73,6 +73,15 @@ html {
 .skip-link:focus {
     transform: translateY(0);
 }
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
 
 code {
     font-family:
@@ -91,7 +100,7 @@ a {
 a:hover {
     color: var(--link-color-hover);
 }
-main {
+.container {
     margin: auto;
     padding: 1rem;
     width: min(960px, calc(100% - 2rem));
@@ -264,6 +273,18 @@ nav {
         display: block;
         padding: 0.75rem 1rem;
     }
+    /* keep the checkbox focusable so the menu works from the keyboard */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        opacity: 0;
+        width: 1px;
+        height: 1px;
+    }
+    .menu-toggle:focus-visible ~ .nav-end .menu-icon {
+        outline: 2px solid white;
+        outline-offset: 2px;
+    }
     .menu-toggle:checked ~ .nav-links {
         display: flex;
     }
@@ -361,6 +382,12 @@ nav {
     width: 4px;
     background: linear-gradient(180deg, rgb(var(--accent)), rgb(var(--accent-dark)));
 }
+.page-card h1 {
+    font-size: 1.35rem;
+    line-height: inherit;
+    text-align: left;
+}
+.page-card h1,
 .page-card h2 {
     margin: 0 0 1rem;
     color: var(--heading-color);
@@ -375,7 +402,7 @@ nav {
 
 /* Footer */
 .footer {
-    margin-bottom: 2rem;
+    margin: 1em 0 2rem;
     border: 1px solid rgba(var(--accent-light), 25%);
     background: linear-gradient(
         135deg,
