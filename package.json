@@ -16,8 +16,8 @@
         "smoke": "bash scripts/smoke.sh"
     },
     "dependencies": {
-        "@astrojs/sitemap": "^3.7.5",
-        "astro": "^7.4.12"
+        "@astrojs/sitemap": "^3.7.6",
+        "astro": "^7.4.13"
     },
     "devDependencies": {
         "@astrojs/check": "^0.9.12",
